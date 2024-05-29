@@ -1,0 +1,17 @@
+{
+  "name": "e2e-cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "login-test": "npx cypress run --headed --spec 'cypress/e2e/login.cy.js'",
+    "additem-test": "npx cypress run --headed --spec 'cypress/e2e/additems.cy.js'",
+    "purchase-test": "npx cypress run --headed --spec 'cypress/e2e/purchase.cy.js'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.10.0"
+  },
+  "description": "This is the excercise for the e2e test"
+}
