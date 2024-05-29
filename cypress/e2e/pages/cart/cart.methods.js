@@ -1,3 +1,4 @@
+import { Logger } from "../../util/logger";
 import { HomeMethods } from "../home/home.methods";
 import { CartData } from "./cart.data";
 import { CartElements } from "./cart.elements";
@@ -50,16 +51,38 @@ export class CartMethods{
     }
 
     static completePlaceOrderModal(){
+
+        Logger.subStep('Go to the cart')
         HomeMethods.goToCart()
+
+        Logger.subStep('Validate if cart is empty')
         this.validateProductsInCart()
+
+        Logger.subStep('Click on place order to open modal')
         this.clickPlaceOrderButton()
+
+        Logger.subStep('Insert name on the form')
         this.insertName(CartData.validInformation.name)
+
+        Logger.subStep('Insert country on the form')
         this.insertCountry(CartData.validInformation.country)
+
+        Logger.subStep('Insert city on the form')
         this.insertCity(CartData.validInformation.city)
+
+        Logger.subStep('Insert credit card number on the form')
         this.insertCreditCard(CartData.validInformation.creditCard)
+
+        Logger.subStep('Insert month on the form')
         this.insertMonth(CartData.validInformation.month)
+
+        Logger.subStep('Insert year on the form')
         this.insertYear(CartData.validInformation.year)
+
+        Logger.subStep('Click on Purchace button')
         this.clickPurchace()
+
+        Logger.subStep('Validate purchase with the modal of confirmation')
         this.validatePurchase()
     }
 }

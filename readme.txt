@@ -31,8 +31,8 @@ Utilizando los scripts con la bandera --headed
     - npm run purchase-test  -> correrá purchase.cy.js
 
 Revisión de los reportes:
-Se aconseja para éste punto correr solamente el script de purchase.cy.js para que se muestre más limpio el reportes
-1. Abrir una terminal y correr 'npm run clean-reports'
+Se aconseja para este punto correr solamente el script de purchase.cy.js para que se muestre más limpio el reporte
+1. Abrir una terminal y correr 'npm run clean-reports' ( para borrar los archivos generados por los previos reportes )
 2. Luego correr 'npm run purchase-test'
 3. Luego correr 'allure generate allure-results -o allure-report --clean'
 4. Luego correr 'allure open'

@@ -1,3 +1,4 @@
+import { Logger } from "../../util/logger"
 import { HomeElements } from "./home.elements"
 
 export class HomeMethods{
@@ -27,10 +28,19 @@ export class HomeMethods{
         cy.contains('a', 'Add to cart').click()
     }
     static addProductToCard(categorie, productName){
+        Logger.subStep('Click on a categorie on the left menu')
         this.goToCategorie(categorie)
+
+        Logger.subStep('Click on a product')
         this.clickOnProduct(productName)
+
+        Logger.subStep('Add the product')
         this.clickOnAddProduct()
+
+        Logger.subStep('Validate if product was added with the alert')
         this.validateAddProduct()
+
+        Logger.subStep('Go Home')
         this.goHome()
     }
 

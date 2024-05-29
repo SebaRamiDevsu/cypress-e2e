@@ -11,3 +11,5 @@ de realizar la compra, este termina con un valor monetario de 0 pero termina lim
 
 5. Los archivos que contienen la data para la pagina ( usuario, categorias, etc ) se encuentran quemados en la prueba, se podría substituir
 por alguna peticion a un API o algun archivo JSON donde se obtenga la informacion  de las categorias y los productos dentro de las categorias
+
+6. El archivo de reporte es bastante simple pero ayuda mucho a un visor sobre los pasos que se realiza durante la ejecucion de las pruebas
