@@ -4,7 +4,7 @@ import { HomeMethods } from "./pages/home/home.methods"
 import { HomeData } from "./pages/home/home.data"
 import { CartMethods } from "./pages/cart/cart.methods"
 
-describe('Test whole interaction', () => {
+describe('Add items to carts > check cart > confirm purchase > validate purchase', () => {
     it('confirm purchase', () => {
       cy.visit('/')
       LoginMethods.login(LoginData.validCredentials.username, LoginData.validCredentials.password)

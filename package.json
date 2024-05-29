@@ -3,15 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "login-test": "npx cypress run --headed --spec 'cypress/e2e/login.cy.js'",
-    "additem-test": "npx cypress run --headed --spec 'cypress/e2e/additems.cy.js'",
-    "purchase-test": "npx cypress run --headed --spec 'cypress/e2e/purchase.cy.js'"
+    "login-test": "npx cypress run --headed --env allure=true --spec 'cypress/e2e/login.cy.js'",
+    "additem-test": "npx cypress run --headed --env allure=true --spec 'cypress/e2e/additems.cy.js'",
+    "purchase-test": "npx cypress run --headed --env allure=true --spec 'cypress/e2e/purchase.cy.js'",
+    "generate-report": "allure generate allure-results -o allure-report --clean",
+    "clean-reports": "rimraf ./allure-report && rimraf ./allure-results",
+    "open-report": "allure open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "This is the excercise for the e2e test",
   "dependencies": {
-    "cypress": "^13.10.0"
-  },
-  "description": "This is the excercise for the e2e test"
+    "@shelex/cypress-allure-plugin": "^2.39.1",
+    "allure-commandline": "^2.22.1",
+    "cypress": "^12.13.0",
+    "rimraf": "^5.0.7"
+  }
 }

@@ -1,0 +1,13 @@
+1. En su mayoría los componentes de la pagina tienen muy poco o casi nada de detalle para poder encontrarlos mediante las funciones de cypress por 
+lo tanto dificulta el seguir buenas practicas acorde a la documentacion de cypress de como obtener/buscar elementos
+
+2. Si no se coloca un assertion que verifique que el carrito no esta vacio al momento de realizar la compra, como cypress es lo suficientemente rapido
+no se termina de realizar la peticion en el navegador que trae la informacion de los productos que se encuentran en el carrito y al momento 
+de realizar la compra, este termina con un valor monetario de 0 pero termina limpiando el carrito
+
+3. El formulario de la pagina para realizar la compra no tiene validacion alguna si se ingresa o no los datos correctamente ( mes, año, tarjeta )
+
+4. Se utiliza la funcion invoke() para escribir el texto en los inputs de la pagina ya que el type en situaciones no escribe por completo el texto
+
+5. Los archivos que contienen la data para la pagina ( usuario, categorias, etc ) se encuentran quemados en la prueba, se podría substituir
+por alguna peticion a un API o algun archivo JSON donde se obtenga la informacion  de las categorias y los productos dentro de las categorias
