@@ -2,7 +2,10 @@
 describe('API test for page demoblaze', () => {
 
     it('Create new user in Sign Up', () => {
-        cy.request('POST','https://api.demoblaze.com/signup', { username:'sebasebasebasebasebas', password:'testtesttest'}).then(response => {
+        const uuid = () => Cypress._.random(0, 1e6)
+        const id = uuid()
+        const testname = `testname${id}`
+        cy.request('POST','https://api.demoblaze.com/signup', { username:testname, password:'testtesttest'}).then(response => {
             expect(response.body).eq('')
         })
     })
@@ -20,10 +23,9 @@ describe('API test for page demoblaze', () => {
         })
     })
 
-    it.only('Login with an invalid user', () => {
+    it('Login with an invalid user', () => {
         cy.request('POST','https://api.demoblaze.com/login', { username:'1', password:'1' }).then(response => {
             expect(response.body).to.have.property('errorMessage', 'Wrong password.')
-            
         })
     })
 

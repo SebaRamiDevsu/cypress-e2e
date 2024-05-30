@@ -1,3 +1,5 @@
+E2E TEST
+
 --- Nota ---
 Se realizó 3 archivos de prueba, la solicitud del ejercicio fue de realizar todo un flujo de añadir productros al carrito y realizar una compra
 Para el archivo de login.cy.js se realiza solamente el login para la plataforma
@@ -36,3 +38,14 @@ Se aconseja para este punto correr solamente el script de purchase.cy.js para qu
 2. Luego correr 'npm run purchase-test'
 3. Luego correr 'allure generate allure-results -o allure-report --clean'
 4. Luego correr 'allure open'
+
+
+
+---------------------------------------------------
+
+API TEST
+Se realizó un archivo para éste test llamado api.cy.js
+
+Para correr el test se necesita:
+1. Abrir un terminal
+2. Correr el comando 'npm run api-test'

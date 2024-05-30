@@ -6,6 +6,7 @@
     "login-test": "npx cypress run --headed --env allure=true --spec 'cypress/e2e/login.cy.js'",
     "additem-test": "npx cypress run --headed --env allure=true --spec 'cypress/e2e/additems.cy.js'",
     "purchase-test": "npx cypress run --headed --env allure=true --spec 'cypress/e2e/purchase.cy.js'",
+    "api-test": "npx cypress run --headed --spec 'cypress/e2e/api.cy.js'",
     "generate-report": "allure generate allure-results -o allure-report --clean",
     "clean-reports": "rimraf ./allure-report && rimraf ./allure-results",
     "open-report": "allure open"

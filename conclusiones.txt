@@ -13,3 +13,8 @@ de realizar la compra, este termina con un valor monetario de 0 pero termina lim
 por alguna peticion a un API o algun archivo JSON donde se obtenga la informacion  de las categorias y los productos dentro de las categorias
 
 6. El archivo de reporte es bastante simple pero ayuda mucho a un visor sobre los pasos que se realiza durante la ejecucion de las pruebas
+
+7. Con respecto al api el parametro de la contraseña se envía ya enccriptado, en lo personal no supe como obtener el cifrado y tuve que ver en el trafico
+del network como envía la contraseña para un caso en específico
+
+8. Entiendo que fueron simples las pruebas del api, desconozco algun parametro de aceptacion y/o de desarrollo de las pruebas por ahora 
